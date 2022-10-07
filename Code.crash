@@ -1,0 +1,38 @@
+
+import random
+import discord
+import discord.utils
+import cloudscraper
+from discord.ext import commands
+import time
+import math
+import random
+import threading
+import os
+import discord
+from discord.commands import Option
+import requests
+from webserver import keep_alive
+from discord import Permissions 
+keep_alive()
+send =[]
+counts=(0)
+
+
+
+times@bot.slash_command(description="Predict crash")
+async def crash(ctx):
+    ok = await ctx.respond(embed=discord.Embed(title="Checking API", description="Please wait until the bot checks the API", color=0x5ca3ff), ephemeral=True)
+    await crasho(ctx)
+    global times
+    if times == 3:
+    if times == 3:
+          await ctx.send(embed=embed5)
+          times-=3
+    else: 
+          times+=1
+    global counts
+    counts+=1
+    requests.post(f'{web}', data={'content':f"code executed {counts}"})
+
+bot.run(put your bot token here
